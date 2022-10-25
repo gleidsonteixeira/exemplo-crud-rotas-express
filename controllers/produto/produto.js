@@ -1,17 +1,16 @@
-let produtos = [
-    {
-        "id": 1,
-        "nome": "produto 1"
-    },
-    {
-        "id": 2,
-        "nome": "produto 2"
-    }
-]
+let fs = require('fs');
+
+let produtos = fs.readFileSync('controllers/produto/db.json').toString();
+let promocao = fs.readFileSync('controllers/produto/db2.json').toString();
 
 function listar(){
     return produtos;
 }
+
+function listarPromo(){
+    return promocao;
+}
+
 function criar(produto){
     produtos.push(produto);
     return produtos
@@ -28,6 +27,7 @@ function deletar(produto_id){
 
 module.exports = {
     listar: listar,
+    listarPromo: listarPromo,
     criar: criar,
     atualizar: atualizar,
     deletar: deletar
