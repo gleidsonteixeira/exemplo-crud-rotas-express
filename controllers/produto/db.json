@@ -1,0 +1,22 @@
+{
+    "produtos": [
+      {
+        "item": "tenis",
+        "quantidade": "30",
+        "preco": "250",
+        "id": "1"
+      },
+      {
+        "item": "camisa",
+        "quantidade": "35",
+        "preco": "100",
+        "id": "2"
+      },
+      {
+        "item": "headset",
+        "quantidade": "80",
+        "preco": "90",
+        "id": "3"
+      }
+    ]
+  }

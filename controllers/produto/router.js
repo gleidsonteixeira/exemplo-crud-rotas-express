@@ -2,9 +2,14 @@ const express = require('express')
 const route = express.Router();
 
 const produto = require("./produto")
+const promocao = require("./produto")
 
 route.get('/produto', (req, res) => {
 res.send(produto.listar())
+})
+
+route.get('/promocao', (req, res) => {
+res.send(promocao.listarPromo())
 })
 
 route.post('/produto', (req, res) => {
